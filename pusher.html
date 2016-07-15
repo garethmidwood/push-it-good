@@ -1,0 +1,48 @@
+<html>
+  <head>
+  	<title>PUSH IT!</title>
+    <link rel="stylesheet" href="css.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <script src="jquery-3.1.0.min.js"></script>
+    <script src="thomas-dotworx-jqrotate-1104735/jquery.rotate-1.0.1.min.js"></script>
+    <script src="js.js"></script>
+    <script src="https://js.pusher.com/3.0/pusher.min.js"></script>
+    <script>
+      var pusher = new Pusher('df00b73b40dd21cc7eef', {cluster:'mt1'})
+       // var button = pusher.subscribe('button-115');
+      var button = pusher.subscribe('button');
+
+      button.bind('press', function(data) {
+        pushed();
+      })
+    </script>
+
+    <h1>AHHH! Push it!</h1>
+    <button id="play" onclick="go();">PLAY!</button>
+
+    <div id="push-even">
+      PUSH</br>IT!
+    </div>
+
+    <div id="push-odd">
+      PUSH</br>IT!
+    </div>
+
+    <video width="320" height="240">
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <img class="emoji" id="poo" src="turd.svg" />
+    <img class="emoji" id="great" src="great.svg" />
+    <img class="emoji" id="good" src="good.svg" />
+    <img class="emoji" id="ok" src="ok.svg" />
+
+    <div id="score">
+      Score: <span>0</span>
+    </div>
+
+  </body>
+</html>

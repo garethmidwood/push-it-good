@@ -1,0 +1,95 @@
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 24pt;
+  background-size: 100% 100%;
+  font-family: 'Monoton', cursive;
+}
+
+body.playing {
+  background-image: url(dance.gif);
+  background-repeat: no-repeat;
+}
+
+h1 {
+  color: orange;
+  font-size: 300%;
+  margin: 0;
+  padding-left: 320px;
+}
+
+div#score {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 40px;
+}
+
+div#score span {
+  position: absolute;
+  left: 110%;
+  bottom: 0;
+}
+
+div#push-even,
+div#push-odd {
+  font-size: 1100%;
+  color: red;
+  position: absolute;
+  top: 20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 2;
+  line-height: 0.9;
+}
+
+video {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+button {
+  margin: 0 100px 0 auto;
+  display: block;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 50px;
+  border-radius: 100px;
+}
+
+
+img.emoji {
+  position: absolute;
+  top: -400px;
+  left: -400px;
+  height: 400px;
+  width: 400px;
+}
+
+img#great {
+  left: 70%;
+}
+
+img#good {
+  top: 100%;
+}
+
+img#ok {
+  top: 50%;
+}
+
+@-webkit-keyframes spinning /*--for webkit--*/{
+
+    from{
+        -webkit-transform:rotate(0deg);
+    }       
+    to{
+        -webkit-transform:rotate(1080deg);
+    }                       
+
+}
+
