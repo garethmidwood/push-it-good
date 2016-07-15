@@ -11,12 +11,19 @@
     <script src="https://js.pusher.com/3.0/pusher.min.js"></script>
     <script>
       var pusher = new Pusher('df00b73b40dd21cc7eef', {cluster:'mt1'})
-       // var button = pusher.subscribe('button-115');
+       // var button = pusher.subscribe('button-123');
       var button = pusher.subscribe('button');
 
       button.bind('press', function(data) {
         pushed();
       })
+
+      $('body').keyup(function(e){
+         if(e.keyCode == 32){
+             // user has pressed space
+             pushed();
+         }
+      });
     </script>
 
     <h1>AHHH! Push it!</h1>

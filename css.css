@@ -5,6 +5,7 @@ body {
   font-size: 24pt;
   background-size: 100% 100%;
   font-family: 'Monoton', cursive;
+  overflow: hidden;
 }
 
 body.playing {
